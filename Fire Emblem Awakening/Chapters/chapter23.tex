@@ -1,0 +1,44 @@
+\begin{battle}{Invisible Ties}
+\battleinfo{rout}{4}{\chrom, \robin}
+\prep{
+	\units{
+		\remove{Everyone}
+	}
+	\item Inventory:
+	\begin{itemize}
+		\item Make sure that \robin has an Elixir
+	\end{itemize}
+}
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\robin}
+	\auto
+}
+\turn{
+	\robinf
+	\moveattack{3D, 2R}{Validar}{2U}
+	\moveuse{8D}{Goddess Icon}
+	\pair{\basilio}{\flavia}
+	\flaviaf
+	\begin{itemize}
+		\move{3U}
+		\trade{\basilio}{Silver Sword}{Silver Axe}
+		\wait
+	\end{itemize}
+}
+\turn{
+	\robinf
+	\moveattack{1R, 2D}{Assassin}{1D}
+	\begin{itemize}
+	\use{Elixir}
+	\end{itemize}
+	\turnend
+}
+\turn{
+	\robinf
+	\moveattack{4R}{Hero}{2L}
+	\movewait{3R, 2D}
+	\turnend
+}
+\end{enumerate}
+\end{battle}

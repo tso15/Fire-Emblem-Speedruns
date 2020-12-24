@@ -1,0 +1,200 @@
+\documentclass[a4paper]{report}
+\usepackage[group-separator={,},group-minimum-digits={3}]{siunitx}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage[margin=0.2in]{geometry}
+\usepackage{xstring}
+\usepackage{xifthen}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\pagenumbering{gobble}
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{0.2pt}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{titlepic}
+\usepackage{enumitem}
+
+\setlist{nosep}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  %\vspace*{5\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \large\bfseries #1
+        \par\nobreak
+%        \vskip 10\p@
+        \rule{\columnwidth}{.1pt}%
+%        \vskip 10\p@
+    \fi
+    \interlinepenalty\@M
+%    \large \bfseries \MakeUppercase{#1}\par\nobreak
+%    \vskip 5\p@
+  }}
+\makeatother
+
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\usepackage{graphicx}
+\title{Fire Emblem Awakening Any\% Normal/Classic}
+\author{Mr.Tyton}
+\titlepic{\includegraphics[width=\textwidth]{fire_emblem_awakening_logo.jpg}}
+\begin{document}
+\singlespacing
+\maketitle
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\newcounter{chaptercount}
+
+\newenvironment{battlespecial}[1]{\begin{tcolorbox}[title=\begin{center}#1\end{center},colbacktitle=red!50!white]}{\end{tcolorbox}}
+\newenvironment{battle}[1]{\refstepcounter{chaptercount} \begin{tcolorbox}[title=\begin{center}Chapter \thechaptercount\ - #1\end{center},colbacktitle=red!50!white]}{\end{tcolorbox}}
+
+
+\newcommand{\battleinfo}[3]{Goal: \ifthenelse{\equal{#1}{rout}}{Rout the Enemy}{\ifthenelse{\equal{#1}{commander}}{Defeat the Commander}{#1}} \newline Turns: #2 \newline Units: #3}
+
+
+\newenvironment{shop}[1]{\begin{tcolorbox}[title=\begin{center}SHOP\, #1 GOLD\end{center},colbacktitle=green!50!white]}{\end{tcolorbox}}
+
+\newcommand{\cs}[1][]{\textbf{CS}%
+	\ifthenelse{\isempty{#1}}{}{ (#1)}%
+}
+
+\setlist[enumerate]{label={Turn \arabic*:\newline}, align=left}
+%\setlist[itemize]{align=left}
+
+\newcommand{\robin}{\textbf{\textcolor{purple}{Robin}}}
+\newcommand{\anna}{\textbf{\textcolor{green}{Anna}}}
+\newcommand{\chrom}{\textbf{\textcolor{blue}{Chrom}}}
+\newcommand{\lucina}{\textbf{\textcolor{cyan}{Lucina}}}
+\newcommand{\frederick}{\textbf{\textcolor{gray}{Frederick}}}
+\newcommand{\sully}{\textbf{\textcolor{BrickRed}{Sully}}}
+\newcommand{\cordelia}{\textbf{\textcolor{Mahogany}{Cordelia}}}
+\newcommand{\ricken}{\textbf{\textcolor{Emerald}{Ricken}}}
+\newcommand{\nowi}{\textbf{\textcolor{SpringGreen}{Nowi}}}
+\newcommand{\olivia}{\textbf{\textcolor{Magenta}{Olivia}}}
+\newcommand{\cherche}{\textbf{\textcolor{Maroon}{Cherche}}}
+\newcommand{\sayri}{\textbf{\textcolor{PineGreen}{Say'ri}}}
+\newcommand{\basilio}{\textbf{\textcolor{brown}{Basilio}}}
+\newcommand{\flavia}{\textbf{\textcolor{RawSienna}{Flavia}}}
+\newcommand{\enemy}[1]{\textbf{\textcolor{red}{#1}}}
+
+
+\newcommand{\autoturn}{\turn{\auto}}
+\newcommand{\autoblitz}{\item Set Auto to \textbf{Blitz}}
+\newcommand{\autocustom}{\item Set Auto to \textbf{Custom}}
+\newcommand{\auto}{\item Auto}
+\newcommand{\pair}[2]{\item Pair #1 to #2}
+\newcommand{\move}[1]{\item Move #1}
+\newcommand{\attack}[2]{\item Attack \enemy{#1} #2}
+\newcommand{\attacks}[2]{\ Attack \enemy{#1} #2}
+\newcommand{\wait}{\item Wait}
+\newcommand{\turn}[1]{\item \ \begin{itemize} #1 \end{itemize}}
+\newcommand{\turnend}{\item End}
+\newcommand{\trade}[3]{\item Trade with #1: #2 for #3}
+\newcommand{\use}[1]{\item Use #1}
+\newcommand{\equip}[1]{\item Equip #1}
+\newcommand{\movewait}[1]{\begin{itemize}\move{#1}\wait\end{itemize}}
+%\newcommand{\movewait}[1]{\ Move [{#1}], Wait}
+\newcommand{\moveuse}[2]{\begin{itemize}\move{#1}\use{#2}\end{itemize}}
+\newcommand{\moveequip}[2]{\begin{itemize}\move{#1}\equip{#2}\wait\end{itemize}}
+\newcommand{\moveattack}[3]{\begin{itemize}\move{#1}\attack{#2}{#3}\end{itemize}}
+\newcommand{\map}[1]{\item View Map: \begin{itemize}#1\end{itemize}}
+\newcommand{\swap}[2]{\item Switch #1 with #2}
+
+\newcommand{\dance}[3]{\oliviaf \begin{itemize}\move{#1}\item Dance for #2 #3\end{itemize}}
+\newcommand{\rally}[1]{\lucinaf \begin{itemize}\move{#1}\item Rally\end{itemize}}
+
+\newcommand{\units}[1]{\item Select Units: \begin{itemize} #1 \end{itemize}}
+\newcommand{\remove}[1]{\item Remove #1}
+\newcommand{\add}[1]{\item Add #1}
+
+\newcommand{\prep}[1]{\newline\newline Preparations: \begin{itemize} #1 \end{itemize}}
+
+\newcommand{\support}[3]{\item Support #1 to #2, Rank #3}
+
+\newcommand{\robinf}{\item \robin:}
+\newcommand{\chromf}{\item \chrom:}
+\newcommand{\frederickf}{\item \frederick:}
+\newcommand{\lucinaf}{\item \lucina:}
+\newcommand{\sullyf}{\item \sully:}
+\newcommand{\rickenf}{\item \ricken:}
+\newcommand{\cordeliaf}{\item \cordelia:}
+\newcommand{\nowif}{\item \nowi:}
+\newcommand{\oliviaf}{\item \olivia:}
+\newcommand{\cherchef}{\item \cherche:}
+\newcommand{\sayrif}{\item \sayri:}
+\newcommand{\basiliof}{\item \basilio:}
+\newcommand{\flaviaf}{\item \flavia:}
+
+
+\setlength{\columnsep}{.5cm}
+
+\section*{Acknowledgements}
+
+Thank you to the people on the FE Discord, including but not limited to: \textbf{Yukiya}, \textbf{Quo}, \textbf{ShockraTease}.
+
+\section*{Introduction}
+
+To be filled.
+\newpage
+
+\begin{multicols}{2}
+\input{Chapters/premonition.tex}
+\input{Chapters/prologue.tex}
+\input{Chapters/chapter1.tex}
+\vfill
+\input{Chapters/chapter2.tex}
+\input{Chapters/shop1.tex}
+\vfill
+\input{Chapters/chapter3.tex}
+\input{Chapters/chapter4.tex}
+\input{Chapters/chapter5.tex}
+\input{Chapters/chapter6.tex}
+\input{Chapters/chapter7.tex}
+\input{Chapters/chapter8.tex}
+\input{Chapters/chapter9.tex}
+\input{Chapters/chapter10.tex}
+\vfill
+\input{Chapters/chapter11.tex}
+\input{Chapters/chapter12.tex}
+\input{Chapters/chapter13.tex}
+\vfill
+\input{Chapters/chapter14.tex}
+\input{Chapters/chapter15.tex}
+\vfill
+\input{Chapters/chapter16.tex}
+\input{Chapters/chapter17.tex}
+\vfill
+\input{Chapters/chapter18.tex}
+\input{Chapters/chapter19.tex}
+\input{Chapters/chapter20.tex}
+\vfill
+\input{Chapters/chapter21.tex}
+\input{Chapters/shop2.tex}
+\input{Chapters/chapter22.tex}
+\vfill
+\input{Chapters/chapter23.tex}
+\input{Chapters/chapter24.tex}
+\input{Chapters/shop3.tex}
+\input{Chapters/chapter25.tex}
+\input{Chapters/grima.tex}
+\end{multicols}
+\end{document}

@@ -1,0 +1,38 @@
+\begin{battle}{Awakening}
+\battleinfo{rout}{3}{\chrom, \robin, \basilio, \flavia}
+\prep{
+	\units{
+		\remove{Everyone but \basilio, \flavia}
+	}
+	\map{
+		\robinf
+		\begin{itemize}
+			\move{8D, 2R}
+		\end{itemize}
+	}
+	\item \textit{If \robin\ has 37 or less Magic:} Use a Second Seal to Dark Flier.
+}
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\robin}
+	\moveattack{4D, 4R}{Paladin}{2D}
+	\moveuse{6L}{Talisman}
+	\pair{\flavia}{\basilio}
+	\basiliof\ Switch
+	\flaviaf\ Wait.
+}
+\turn{
+	\robinf
+	\moveattack{6U}{Great Knight}{1UR}
+	\moveuse{3D, 5R}{Elixir}
+	\turnend
+}
+\turn{
+	\flaviaf
+	\begin{itemize}
+		\use{elixir}
+	\end{itemize}
+	\turnend
+}
+\end{enumerate}
+\end{battle}

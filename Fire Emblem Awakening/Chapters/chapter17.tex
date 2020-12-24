@@ -1,0 +1,28 @@
+\begin{battle}{Inexorable Death}
+\battleinfo{commander}{2}{\chrom, \robin, \frederick}
+\prep{
+	\units{
+		\remove{Everyone but \frederick}
+	}
+}
+\begin{enumerate}
+\turn{
+	\pair{\frederick}{\robin}
+	\chromf
+	\movewait{1D, 1L}
+	\robinf
+	\moveattack{5U, 4L}{War Monk}{2L}
+	\movewait{3U, 2R}
+}
+\turn{
+	\robinf
+	\moveattack{6U, 1R}{Hero}{2R}
+	\begin{itemize}
+		\move{2R, 5U}
+		\item Switch
+		\item Separate, place \robin\ up
+	\end{itemize}
+	\turnend
+}
+\end{enumerate}
+\end{battle}

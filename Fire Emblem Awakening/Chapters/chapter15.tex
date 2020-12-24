@@ -1,0 +1,36 @@
+\begin{battle}{Smoldering Resistance}
+\battleinfo{rout}{4}{\chrom, \robin, \frederick, \cherche}
+\prep{
+	\item Inventory:
+	\begin{itemize}
+		\robinf
+		\begin{itemize}
+			\item Remove all Non-El spell, Elixir x3, Bullions
+			\item Take all other El-spells
+		\end{itemize}
+	\end{itemize}
+	\units{
+		\remove{Everyone}
+	}
+}
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\robin}
+	 \robinf
+	 \moveattack{1U, 2R}{General}{2R}
+	 \movewait{4L, 4U}
+	 \pair{\frederick}{\cherche}
+	 \cherchef
+	 \movewait{1D, 4R}
+}
+\turn{
+	\robinf
+	\moveattack{3U, 5L}{Cavalier}{2L}
+	\moveattack{3D, 3L}{Cavalier}{2U}
+	\autoblitz
+	\auto
+}
+\autoturn
+\autoturn
+\end{enumerate}
+\end{battle}

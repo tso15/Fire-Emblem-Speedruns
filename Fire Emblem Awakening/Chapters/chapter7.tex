@@ -1,0 +1,39 @@
+\begin{battle}{Incursion}
+\battleinfo{rout}{4-5}{\robin, \frederick}
+\prep{
+	\units{
+		\remove{\ricken ($\downarrow\leftarrow$)}
+	}
+	\item Inventory:
+	\begin{itemize}
+		\robinf
+		\begin{itemize}
+			\use{Second Seal}, reclass to Pegasus Rider
+			\item Take Bronze Lance, Javelin
+		\end{itemize}
+		\frederickf
+		\begin{itemize}
+			\item Stash all weapons
+		\end{itemize}
+	\end{itemize}		
+}
+\begin{enumerate}
+\turn{
+	\pair{\frederick}{\robin}
+	\robinf
+	\movewait{3R, 1U}
+	\turnend
+}
+\turn{
+	\robinf
+	\moveattack{6R, 1U}{Archer}{1U}
+	\auto
+}
+\turn{
+	\item If you are low on HP, can heal. Always end battle on turn 5 at the latest, to avoid reinforcements.
+	\robinf
+	\moveattack{2R, 1U}{Archer}{1L}
+}
+\autoturn
+\end{enumerate}
+\end{battle}

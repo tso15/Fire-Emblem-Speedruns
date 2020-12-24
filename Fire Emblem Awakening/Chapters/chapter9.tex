@@ -1,0 +1,27 @@
+\begin{battle}{Emmeryn}
+\battleinfo{rout}{3-4}{\chrom, \robin, \frederick, \cordelia}
+\prep{
+	\units{
+		\remove{Everyone but \frederick, \cordelia}
+	}
+	\robinf\ Remove Relief Skill
+	\item Keep the Dracoshield and ElThunder when they drop.
+}
+
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\cordelia}
+	\cordeliaf
+	\movewait{2L}
+	\pair{\frederick}{\robin}
+	\robinf
+	\movewait{8D, 1R}
+}
+\turn{
+	\robinf
+	\moveattack{6R, 2D}{Archer}{1UR}
+	\turnend
+}
+\autoturn
+\end{enumerate}
+\end{battle}

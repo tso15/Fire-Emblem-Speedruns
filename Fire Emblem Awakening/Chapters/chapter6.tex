@@ -1,0 +1,32 @@
+\begin{battle}{Foreseer}
+\battleinfo{rout}{4}{\chrom, \robin, \sully, \frederick}
+\prep{
+	\units{
+		\remove{\ricken ($\downarrow\rightarrow$), Maribelle ($\rightarrow$), Virion ($\downarrow$), Lissa ($\leftarrow$), Lon'qu ($\leftarrow$), Vaike ($\downarrow$)}
+	}
+}
+
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\robin}
+	\robinf
+	\movewait{4L, 1D}
+	\pair{\sully ($\leftarrow\leftarrow$)}{\frederick}
+	\auto
+}
+\turn{
+	\robinf
+	\movewait{4D, 1L}
+	\frederickf
+	\moveattack{1D}{Fighter}{1D}
+	\item Panne:
+	\movewait{2D}
+}
+\turn{
+	\robinf
+	\movewait{5D}
+	\auto
+}
+\autoturn
+\end{enumerate}
+\end{battle}

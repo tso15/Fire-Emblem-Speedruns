@@ -1,0 +1,54 @@
+\begin{battle}{Warrior Realm}
+\battleinfo{commander}{5}{\chrom, \robin}
+\prep{
+	\units{
+		\remove{Stahl ($\downarrow\downarrow\rightarrow$)}
+		\add{Miriel ($\rightarrow$)}
+	}
+	\item Inventory:
+	\begin{itemize}
+		\robinf
+		\begin{itemize}
+			\item Convoy everything but \textbf{Thunder}
+			\item Take Virion's \textbf{Elixir}
+			\item Take Miriel's \textbf{Fire}
+		\end{itemize}
+	\end{itemize}
+}
+
+\begin{enumerate}
+	\turn{
+		\chromf
+		\begin{itemize}
+			\move{5L}
+			\item Talk to Kellam
+			\pair{\chrom}{Kellam}
+		\end{itemize}
+		\pair{Miriel}{\robin}
+		\robinf
+		\movewait{5L}
+		\turnend
+	}
+	\turn{
+		\robinf
+		\movewait{3U, 2L}
+		\turnend
+	}
+	\turn{
+		\robinf
+		\begin{itemize}
+			\move{1L, 3U}
+			\item Open Door
+		\end{itemize}
+		\turnend
+	}
+	\turn{
+		\robinf
+		\moveuse{2U, 3R}{Elixir}
+		\turnend
+	}
+	\autoturn
+\end{enumerate}
+
+
+\end{battle}

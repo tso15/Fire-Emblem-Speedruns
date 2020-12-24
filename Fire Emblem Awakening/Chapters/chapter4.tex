@@ -1,0 +1,33 @@
+\begin{battle}{Two Falchions}
+\battleinfo{rout}{3-4}{\chrom, \robin}
+\prep{
+	\units{
+		\remove{\frederick ($\downarrow$), Virion ($\rightarrow$), \sully ($\rightarrow$), Lissa ($\uparrow$)}
+	}
+}
+
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\robin}
+	\robinf
+	\movewait{5U}
+}
+\turn{
+	\robinf
+	\movewait{1U, 1R}
+}
+\turn{
+	\item \textit{If \lucina\ dies:}
+	\begin{itemize}
+		\robinf
+		\moveuse{4U}{Elixir}
+	\end{itemize}
+	\item \textit{Else:}
+	\begin{itemize}
+		\robinf
+		\moveuse{4U, 1L}{Elixir}
+	\end{itemize}
+}
+\autoturn
+\end{enumerate}
+\end{battle}

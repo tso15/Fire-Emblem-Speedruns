@@ -1,0 +1,57 @@
+\begin{battle}{The Grimleal}
+\battleinfo{rout}{5}{\chrom, \robin, \frederick, \cordelia}
+\prep{
+	\units{
+		\remove{Everyone}
+		\add{\cordelia, exit and re-enter menu}
+		\add{\frederick}
+	}
+}
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\cordelia}
+	\cordeliaf
+	\movewait{2U}
+	\pair{\frederick}{\robin}
+	\begin{itemize}
+		\move{5D, 2L}
+		\equip{Javelin}
+		\wait
+	\end{itemize}
+	\pair{Gregor}{\nowi}
+	\nowif
+	\movewait{4U, 1R}
+}
+\turn{
+	\nowif
+	\movewait{4U}
+	\robinf
+	\movewait{5D, 3R}
+	\turnend
+}
+\turn{
+	\nowif
+	\movewait{3U}
+	\robinf
+	\begin{itemize}
+		\move{1D, 5L}
+		\item Visit Village, convoying the \textbf{Javelin}
+	\end{itemize}
+	\turnend
+}
+\turn{
+	\robinf
+	\movewait{3D, 3R}
+	\turnend
+}
+\turn{
+	\robinf
+	\begin{itemize}
+		\move{2D, 4R}
+		\item \robin\ should be Level 10
+		\use{Master Seal, reclass to Dark Flier}
+	\end{itemize}
+	\turnend
+}
+\end{enumerate}
+\end{battle}

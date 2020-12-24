@@ -1,0 +1,29 @@
+\begin{battle}{Five Gemstones}
+\battleinfo{commander}{2}{\chrom, \robin, \frederick, \sayri}
+\prep{
+	\units{
+		\remove{Everyone except \frederick, \sayri}
+	}
+	\map{
+		\move{\robin}{1R, 4D}
+	}
+}
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\sayri}
+	\sayrif
+	\movewait{1U, 1R}
+	\pair{\frederick}{\robin}
+	\robinf
+	\moveattack{5L, 4D}{Assassin}{2D}
+	\moveattack{5D, 4R}{Assassin}{1UR}
+}
+\turn{
+	\sayrif\ Heal if needed.
+	\robinf
+	\moveattack{5D, 1R}{Berserker}{2L}
+	\movewait{3D, 2L}
+	\turnend
+}
+\end{enumerate}
+\end{battle}
