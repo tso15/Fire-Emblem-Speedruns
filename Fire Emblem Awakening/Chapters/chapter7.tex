@@ -26,14 +26,40 @@
 }
 \turn{
 	\robinf
-	\moveattack{6R, 1U}{Archer}{1U}
+	\moveattack{2U, 5R}{Archer}{1R}
 	\auto
 }
 \turn{
-	\item If you are low on HP, can heal. Always end battle on turn 5 at the latest, to avoid reinforcements.
+	\item If you are low on HP (below half), can heal. Always end battle on turn 5 at the latest, to avoid reinforcements.
+	\item \textit{If you don't need to heal:}
+	\begin{itemize}
 	\robinf
-	\moveattack{2R, 1U}{Archer}{1L}
+	\moveattack{3R}{Archer}{1R}
+	\end{itemize}
+	\textit{If you do need to heal:}
+	\begin{itemize}
+	\robinf
+	\moveattack{2R, 1D}{Archer}{1U}
+	\end{itemize}
 }
-\autoturn
+\turn{
+	\item \textit{If you didn't need to heal:}
+	\begin{itemize}
+		\auto
+	\end{itemize}
+	\item \textit{If you do need to heal}
+	\begin{itemize}
+	\robinf
+	\moveuse{2R}{Elixir/Concoction}
+	\end{itemize}
+}
+\turn{
+	\robinf
+	\begin{itemize}
+		\item Attack the \enemy{Bandit with the Hand Axe}
+	\end{itemize}
+	\auto\ if needed.
+	\turnend
+}
 \end{enumerate}
 \end{battle}
