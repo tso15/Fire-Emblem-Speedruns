@@ -1,0 +1,56 @@
+\begin{battle}{Solo}
+\battleinfo{boss}{1}{\marcia, \titania, \tanith, \reyson, \calill, \mordecai}
+\newline\newline Skip Base
+\prep{
+    \units{
+        \item Remove \gatrie
+        \item Select \mordecai
+    }
+    \map{
+        \swap{\reyson}{\rhys}
+        \swap{\calill}{\marcia}
+        \swap{\titania}{\mordecai}
+        \swap{\titania}{\tanith}
+    }
+}
+\textit{\underline{Note}: You may want to safety save in case Marcia dies}
+\vspace{3mm}
+\begin{enumerate}
+\turn{
+    \calillf
+    \moveattack{4U, 1L}{Bishop}{10U (mash A since he's the default option)}
+    \item (Off 2X) \marcia:
+    \moveattack{3L, 6U}{Priest}{2U with \textbf{Forged Javelin}}
+    \item (X 1D) \titania:
+    \moveattack{9U}{Priest}{1U}
+    \item (Off X 2L) \mordecai:
+    \begin{itemize}
+        \move{2U}
+        \item Smite \tanith
+    \end{itemize}
+    \tanithf
+    \moveattack{8U, 1R}{Sniper}{2U with \textbf{Forged Javelin}}
+    \item (Off 2X) \reyson:
+    \begin{itemize}
+        \move{2L, 3U}
+        \item Chant \marcia
+    \end{itemize}
+    \marciaf
+    \moveattack{9U, 1R}{Schaeffer}{1U with \textbf{Forged Silver Lance}
+        \begin{itemize}
+            \item \textit{He'll die only on a lucky crit, but on Enemy Phase he`ll attack and die before any other unit}
+        \end{itemize} 
+    }
+    \item Drop Killer Bow
+}
+\end{enumerate}
+\vspace{3mm}
+\begin{itemize}
+    \item This strategy can fail if one of the follows happen:
+    \begin{itemize}
+        \item \tanith\ misses the sniper. Her displayed hitrate is usually high 90ish to 100\%
+        \item The boss hits \marcia\ twice, one of which is a crit. The chance of this depends on biorhythm, but worst-case scenario (Marcia has bad biorhythm and boss has good biorhythm) is approximately 8\% chance.
+        \item The boss hits \marcia with a crit and Colossus. The chances of this are laughably low, so if it happens, I’m sorry.
+    \end{itemize}   
+\end{itemize}
+\end{battle}

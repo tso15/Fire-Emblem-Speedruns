@@ -1,0 +1,81 @@
+\begin{battle}{Blood Runs Red}
+\battleinfo{Arrive}{4}{\ike, \marcia}
+\base{
+    \outfit{
+        \ikef
+        \begin{itemize}
+            \item Trade:
+            \begin{itemize}
+            \item Knight Band and Chest Key for \marcia\ Pegasus Band
+            \end{itemize}
+            \item Equip: Pegasus Band
+        \end{itemize}
+        \marciaf
+        \begin{itemize}
+            \item Trade:
+            \begin{itemize}
+                \item Take \oscar\ Seraph Robe and Vulnerary
+            \end{itemize}
+            \item Equip: Knight Band
+            \item Use: Seraph Robe
+            \item Shop:
+                \begin{itemize}
+                    \item Forge: \textbf{Steel Lance} with max Atk, Hit, Crit (15, 95, 9)
+                \end{itemize}
+        \end{itemize}
+    }
+    \bexp{
+        \marciaf
+        \begin{itemize}
+            \item Lvl up to 20 (Class Change)
+        \end{itemize}
+        \ikef
+        \begin{itemize}
+            \item Lvl up to 17
+        \end{itemize}
+    }
+    \item Info: Man (Laguzslayer)
+} 
+\vspace{3mm}
+\prep{
+    \units{
+    \item Remove everyone except \marcia
+    }
+    \map{
+    \item Move \marcia\ 2D, 6L
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \movewait{5L}
+    \marciaf
+    \begin{itemize}
+        \item Equip/unequip Forged Steel Lance
+        \item Rescue \ike
+    \end{itemize}
+    \canto{9U}
+}
+\turn{
+    \marciaf
+    \movewait{7U}
+}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \move{8L}
+        \drop{\ike\ left}
+    \end{itemize}
+    \canto{1D}
+}
+\turn{
+    \marciaf
+    \moveattack{1D, 4L}{Knight}{1L}
+    \Xmove{1}{\ike}
+    \begin{itemize}
+        \move{4L, 2D}
+        \item Arrive
+    \end{itemize}
+}
+\end{enumerate}
+\end{battle}

@@ -1,0 +1,62 @@
+\begin{battle}{Prisoner Release}
+\battleinfo{Escape}{9}{\ike, \titania}
+\newline\newline Skip Base
+\begin{itemize}
+\item Recruit \volke\ (1st option)
+\end{itemize}
+\vspace{3mm}
+\prep{
+    \units{
+        \item Remove everyone except \titania
+        \item Select \mordecai\ then \lethe
+        \item Exit screen, return and remove \lethe\ then \mordecai
+    }
+}
+\begin{enumerate}
+\turn{
+    \Xmove{1}{\titania}
+    \begin{itemize}
+        \move{2U}
+        \item Rescue \ike
+    \end{itemize}
+    \canto{3R}
+}
+\turn{
+    \turnend
+}
+\turn{
+    \titaniaf
+    \movewait{4D, 5R}
+}
+\turn{
+    \titaniaf
+    \movewait{5R, 1U}
+}
+\turn{
+    \turnend
+}
+\turn{
+    \titaniaf
+    \movewait{4U, 5L}
+}
+\turn{
+    \titaniaf
+    \movewait{1R, 3U}
+}
+\turn{
+    \titaniaf
+    \movewait{4U, 2L}
+}
+\turn{
+    \titaniaf
+    \begin{itemize}
+        \move{3L, 6U}
+        \item Escape
+    \end{itemize}
+}
+\end{enumerate}
+\vspace{3mm} After escaping:
+\begin{itemize}
+    \item Keep \volke\ (1st option)
+\end{itemize}
+\end{battle}

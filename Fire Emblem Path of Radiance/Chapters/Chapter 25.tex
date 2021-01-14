@@ -1,0 +1,132 @@
+\begin{battle}{Strange Lands}
+\battleinfo{rout}{3}{\ike, \marcia, \tanith, \reyson, \muarim, \largo}
+\base{
+    \item Manage:
+    \begin{itemize}
+        \item Skills:
+        \begin{itemize}
+            \item \marcia:
+            \begin{itemize}
+                \item Assign Savior
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \item Info: Man (Largo)
+    \outfit{
+        \largof
+        \begin{itemize}
+            \item Shop:
+            \begin{itemize}
+                \item Forge: \textbf{Hand Axe} with max Atk, Hit, Crit (12, 80, 9)
+            \end{itemize}
+        \end{itemize}
+        \marciaf
+        \begin{itemize}
+            \item Trade:
+            \begin{itemize}
+                \item Lucia: Pegasus Band for Laguzguard
+                \item \geoffrey:\ Slim Sword for Brave Lance
+            \end{itemize}
+        \end{itemize}
+        \item \geoffrey:
+        \begin{itemize}
+            \item Trade:
+            \begin{itemize}
+                \item Take Ranulf's Elixir
+                \item Take \astrid's\ Knight Ward
+            \end{itemize}
+        \end{itemize}
+    }
+}
+\prep{
+    \units{
+        \item Remove \calill, \mordecai, everyone below \muarim
+        \item Select \largo
+    }
+    \map{
+        \item Move \marcia\ 3R, 3U
+        \item Move \largo\ 3R, 1U
+        \swap{\largo}{\reyson}
+        \swap{\tanith}{\muarim}
+    }
+}
+\begin{enumerate}
+\turn{
+    \Xmove{1}{\marcia}
+    \movewait{4U}
+    \Xmove{2}{\reyson}
+    \begin{itemize}
+        \move{4U, 1L}
+        \item Chant \marcia
+    \end{itemize}
+    \marciaf
+    \moveattack{11U}{Gromell}{1U with \textbf{Brace Lance}
+        \item Drop Bolt Axe
+        }
+    \Xmove{1}{\tanith}
+    \begin{itemize}
+        \move{1R, 3U}
+        \item Rescue \reyson
+    \end{itemize}
+    \canto{1D}
+    \Xmove{1}{\muarim}
+    \begin{itemize}
+        \move{3L}
+        \item Smite \ike
+    \end{itemize}
+    \Xmove{1}{\largo}
+    \moveequip{5U, 1R}{Forged Hand Axe}
+    \Xmove{1}{\ike}
+    \moveattack{2L, 5U}{Laguz}{1L with \textbf{Laguzslayer}}
+}
+\end{enumerate}
+\end{battle}
+
+\begin{tcolorbox}[title=\begin{center}Chapter 25 - Strange Lands\end{center},colbacktitle=blue!50!white]
+\begin{enumerate}
+\setcounter{enumi}{1}
+\turn{
+    \ikef
+    \moveattack{4L}{Sage}{1L with \textbf{Forged Steel Sword}}
+    \Xmove{1}{\marcia}
+    \moveattack{4U, 2L}{Bishop}{2L with \textbf{Spear}}
+    \drop{Purge}
+    \canto{4R, 1D}
+    \Xmove{1}{\tanith}
+    \begin{itemize}
+        \move{6R, 1U}
+        \begin{itemize}
+            \item \textit{If \largo\ failed to kill the \enemy{Warrior}, kill him and canto to the same spot}
+        \end{itemize}
+    \end{itemize}
+    \Xmove{1}{\muarim}
+    \movewait{3L, 3U}
+    \Xmove{1}{\largo}
+    \moveattack{1U, 1R}{Laguz}{1U, 1R}
+}
+\turn{
+    \Xmove{1}{\marcia}
+    \moveattack{2D, 2R}{Sniper}{1U with \textbf{Short Spear}}
+    \canto{5R, 2D}
+    \Xmove{2}{\muarim}
+    \begin{itemize}
+        \move{5U, 2L}
+        \item Smite \ike
+    \end{itemize}
+    \Xmove{1}{\largo}
+    \moveattack{1L, 2U \begin{itemize}
+        \item \textit{If \tanith's Javelin didn't break in Chapter 22, equip it and move her instead to this spot}
+    \end{itemize} }{Whichever enemy in range}{}
+    \Xmove{1}{\ike}
+    \moveattack{4U, 3R}{Sniper}{1D with \textbf{Regal Sword}}
+    \item On Enemy Phase:
+    \drop{Laguzslayer}
+}
+\end{enumerate}
+\vspace{3mm}
+\begin{itemize}
+    \item \textit{You can use Tanith to cleanup any enemies that Largo didn’t kill, remember to canto her out of the way.}
+    \item \textit{If Largo dies (pretty unlikely), just keep going since he’s not really needed afterwards (though this may mess up unit management later on). This should only happen if the sniper survives Largo’s attack, and crits him twice. Tanith should hopefully be able to clean up after him.}
+    \item \textit{All units should be dead by the end of turn 3 enemy phase. If some units dodged and/or survived, finish them off in turn 4}
+\end{itemize}   
+\end{tcolorbox}

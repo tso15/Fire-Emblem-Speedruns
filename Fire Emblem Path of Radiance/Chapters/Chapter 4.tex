@@ -1,0 +1,42 @@
+\begin{battle}{Roadside Battle}
+\battleinfo{boss}{2}{\ike, \titania, \shinon, \gatrie, \rhys, \soren}
+\vspace{3mm}
+\begin{itemize}
+    \item \ike\ drop any Iron Sword when getting Regal Sword
+\end{itemize} 
+\vspace{3mm}
+\begin{enumerate}
+\turn{
+    \sorenf
+    \movewait{1U}
+    \Xmove{1}{\rhys}
+    \moveshove{2U}{\shinon}
+    \Xmove{1}{\ike}
+    \begin{itemize}
+        \move{1U}
+        \unequip
+        \shove{\shinon}
+    \end{itemize}
+    \gatrief
+    \begin{itemize}
+        \move{1U}
+        \unequip
+        \shove{\shinon}
+    \end{itemize}
+    \Xmove{1}{\titania}
+    \begin{itemize}
+        \equip{Thief Band}
+        \use{Speedwing}
+    \end{itemize}
+    \canto{2U, 6L}
+    \Xmove{1}{\shinon}
+    \moveattack{2U, 5L}{Soldier}{2D}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\titania}
+    \moveattack{4L, 3U}{Maijin}{1R}
+    \drop{used Steel Axe}
+}
+\end{enumerate}
+\end{battle}

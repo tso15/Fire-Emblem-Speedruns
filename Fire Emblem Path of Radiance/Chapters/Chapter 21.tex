@@ -1,0 +1,133 @@
+\begin{battle}{Without a King}
+\battleinfo{Seize}{5}{\ike, \marcia, \tanith, \reyson}
+\base{
+    \outfit{
+        \marciaf
+        \begin{itemize}
+            \item Shop:
+            \begin{itemize}
+                \item Forge: \textbf{Silver Lance} with max Atk, Hit, Crit (20, 100, 9)
+            \end{itemize}
+        \end{itemize}
+    }
+    \item Manage:
+    \begin{itemize}
+        \item Award Exp:
+            \begin{itemize}
+                \ikef
+                \begin{itemize}
+                    \item Lvl up to 11 (Need 14 RES, 20 DEF)
+                \end{itemize}
+            \end{itemize}
+        \item Skills:
+        \begin{itemize}
+            \item \muarim:
+            \begin{itemize}
+                \item Assign Smite
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+}
+\prep{
+    \units{
+        \item Remove everyone except \marcia, \tanith, \reyson
+    }
+    \map{
+        \item Move \reyson\ 4R, 2U
+        \item Move \marcia\ 5R, 1U
+        \item Move \tanith\ 5R, 1U
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \begin{itemize}
+        \move{2R, 1U}
+        \equip{Regal Sword}
+        \use{Pure Water}
+    \end{itemize}
+    \marciaf
+    \begin{itemize}
+        \item Rescue \ike
+    \end{itemize}
+    \canto{2R, 4U}
+    \Xmove{2}{\reyson}
+    \begin{itemize}
+        \move{2R, 3U}
+        \item Chant \marcia
+    \end{itemize}
+    \marciaf
+    \begin{itemize}
+        \equip{Forged Javelin \#2}
+        \trade{\reyson}{Wrath}{Elixir}
+        \use{Pure Water}
+    \end{itemize}
+    \canto{5L, 6U}
+    \Xmove{1}{\tanith}
+    \begin{itemize}
+        \move{2R, 5U}
+        \item Rescue \reyson
+    \end{itemize}
+    \canto{3D}
+}
+\turn{
+    \marciaf
+    \movewait{4L, 7D}
+    \Xmove{1}{\tanith}
+    \movewait{2D, 7L}
+}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \move{7L, 3D}
+        \item Drop \ike\ down
+    \end{itemize}
+    \canto{1L}
+    \Xmove{1}{\tanith}
+    \movewait{4U}
+    \item Drop Killing Edge
+}
+\end{enumerate}
+\end{battle}
+
+\begin{tcolorbox}[title=\begin{center}Chapter 21 - Without a King\end{center},colbacktitle=blue!50!white]
+\begin{enumerate}
+\setcounter{enumi}{3}
+\turn{
+    \ikef
+    \begin{itemize}
+        \move{2L, 1U}
+        \item Talk to \tauroneo
+    \end{itemize}
+    \tauroneof
+    \begin{itemize}
+        \move{2U}
+        \trade{\ike}{Spear}{Tomahawk}
+        \item Rescue \ike
+    \end{itemize}
+    \Xmove{1}{\marcia}
+    \begin{itemize}
+        \move{1L, 2U}
+        \equip{Forged Silver Lance}
+        \item Take/drop \ike\ up
+    \end{itemize}
+    \canto{7U}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\marcia}
+    \begin{itemize}
+        \attack{Ena}{1U}
+    \end{itemize}
+    \ikef
+    \begin{itemize}
+        \move{7U}
+        \item Seize
+    \end{itemize}
+}
+\end{enumerate}
+\vspace{3mm}
+\begin{itemize}
+    \item \textit{Note that \enemy{Ena} has miracle. \marcia\ can fail to kill her if she activates miracle twice (14\% each, or 1.96\% total). If this happens, have \marcia\ canto away and \ike\ finish \enemy{Ena}. There isn’t much you can do about this except wait out the next turn and bite the time loss.}
+\end{itemize}
+\end{tcolorbox}

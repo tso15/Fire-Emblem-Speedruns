@@ -1,0 +1,167 @@
+\begin{battle}{A Guiding Wind}
+\battleinfo{Defend for 10 turns}{10}{\ike, \marcia, \titania, \oscar, \rhys, \boyd, \lethe, \mordecai, \volke, \gatrie}
+\base{
+    \outfit{
+        \marciaf
+        \begin{itemize}
+            \item Use: Seraph Robe
+            \item Shop:
+                \begin{itemize}
+                    \item Forge: \textbf{Javelin \#1} with max Atk, Hit, Crit (11, 85, 9)
+                \end{itemize}
+        \end{itemize}
+    }
+    \bexp{
+    \marciaf
+    \begin{itemize}
+        \item Lvl up to 7 (You want to hit 20 STR)
+    \end{itemize}
+    }
+}
+\prep{
+    \units{
+        \item Remove Mist, Rolf, \soren
+    }
+    \map{
+        \item Move \marcia\ 1U, 4L
+        \swap{\boyd}{\lethe}
+        \item Move \volke\ 2U, 1L
+    }
+}
+\vspace{3mm}
+\textit{\underline{Note}: Drop any item from chest when full}
+\begin{enumerate}
+\turn{
+    \oscarf
+    \begin{itemize}
+        \move{7U, 1R}
+        \unequip
+        \item Rescue Ally Soldier 1U
+    \end{itemize}
+    \item (Off 2X) \marcia:
+    \begin{itemize}
+        \move{8U, 1R}
+        \equip{Forged Javelin \#1}
+        \item Open chest
+    \end{itemize}
+    \Xmove{1}{\titania}
+    \moveattack{3R, 6U}{Soldier}{1U}
+    \Xmove{1}{\lethe}
+    \moveattack{6U, 2R}{Archer}{1U}
+    \Xmove{2}{\boyd}
+    \moveshove{1L}{\volke}
+    \Xmove{1}{\volke}
+    \begin{itemize}
+        \move{4U, 3L}
+        \item Open chest
+    \end{itemize}
+    \Xmove{1}{\rhys}
+    \moveshove{2U, 1L}{\ike}
+    \mordecaif
+    \begin{itemize}
+        \move{2R, 2U}
+        \item Smite \ike
+    \end{itemize}
+    \Xmove{1}{\ike}
+    \begin{itemize}
+        \move{3U, 3R}
+        \item Talk to \astrid
+    \end{itemize}
+    \astridf
+    \begin{itemize}
+        \item Talk to \gatrie
+        \item Rescue Ally Soldier 1R
+    \end{itemize}
+    \canto{3L, 3D}
+    \Xmove{1}{\gatrie}
+    \begin{itemize}
+        \move{3L}
+        \item Rescue Ally Soldier 1U
+    \end{itemize}
+}
+\end{enumerate}
+\end{battle}
+
+\begin{tcolorbox}[title=\begin{center}Chapter 13 - A Guiding Wind\end{center},colbacktitle=blue!50!white]
+\begin{enumerate}
+\setcounter{enumi}{1}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \move{1L, 4U}
+        \attack{Archer}{1R with \textbf{Forged Steel Lance}}
+        \begin{itemize}
+            \item \textit{If Corrosion activated last chapter, use \textbf{normal Javelin} instead}
+        \end{itemize}
+    \end{itemize}
+    \canto{1U}
+    \Xmove{1}{\titania}
+    \moveattack{4R, 2U}{Myrmidon}{1R}
+    \canto{1R, 1U}
+    \Xmove{1}{\lethe}
+    \moveattack{3D}{Soldier}{1L}
+    \Xmove{1}{\mordecai}
+    \begin{itemize}
+        \move{6U}
+        \item Take Ally Soldier from \oscar
+    \end{itemize}
+    \gatrief
+    \movewait{1R, 1D}
+    \oscarf
+    \begin{itemize}
+        \move{3R, 2U}
+        \item Rescue Ally Soldier 1U
+    \end{itemize}
+    \Xmove{2}{\volke}
+    \movewait{7R}
+    \turnend
+}
+\turn{
+    \volkef
+    \begin{itemize}
+        \move{2R, 1U}
+        \item Open chest
+    \end{itemize}
+    \item (Off 2X) \marcia:
+    \begin{itemize}
+        \item Open chest
+    \end{itemize}
+    \canto{5R, 2D}
+    \Xmove{1}{\titania}
+    \moveattack{1U}{Halberdier}{1U}
+    \canto{2U, 6L}
+    \turnend
+}
+\turn{
+    \volkef
+    \begin{itemize}
+        \move{2U}
+        \item Open chest
+    \end{itemize}
+    \item (Off 2X) \marcia:
+    \moveattack{4R, 3U}{Norris}{1U with \textbf{Forged Steel Lance}}
+    \drop{Longbow}
+    \Xmove{1}{\titania}
+    \begin{itemize}
+        \item Open chest
+    \end{itemize}
+    \canto{1L}
+    \turnend
+}
+\turn{
+    \volkef
+    \begin{itemize}
+        \move{6U, 1L}
+        \item Open chest
+    \end{itemize}
+    \marciaf
+    \moveattack{2U, 3L}{Archer}{1L}
+    \Xmove{1}{\titania}
+    \moveattack{2U}{Mage}{1U}
+}
+\end{enumerate}
+\vspace{3mm}
+\begin{itemize}
+    \item End Turn until Chapter ends
+\end{itemize} 
+\end{tcolorbox}

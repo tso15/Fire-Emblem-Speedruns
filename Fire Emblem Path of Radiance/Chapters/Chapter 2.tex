@@ -1,0 +1,43 @@
+\begin{battle}{Rescue}
+\battleinfo{rout}{4}{\ike, \oscar, \titania, \rhys}
+\begin{enumerate}
+\turn{
+    \ikef
+    \movewait{1R}
+    \Xmove{1}{\oscar}
+    \moveequip{1R}{Iron Lance}
+    \rhysf
+    \movewait{1R}
+    \turnend
+}
+\turn{
+    \item \textit{If \enemy{Bandit}\ is still alive:}
+    \begin{itemize}
+        \ikef
+        \attacks{Bandit}{1R}
+    \end{itemize}
+    \item \textit{If \enemy{Myrmidon}\ is still alive:}
+    \begin{itemize}
+        \Xmove{1}{\oscar}
+        \attacks {Myrmidon}{1U}
+    \end{itemize}
+    \turnend
+}
+\turn{
+        \item \textit{If \enemy{Bandit}\ is still alive:}
+    \begin{itemize}
+        \ikef
+        \attacks {Bandit}{1R}
+    \end{itemize}
+    \Xjump{1}{\rhys}{\titania}
+    \movewait{3R, 6U}
+    \turnend
+}
+\turn{
+    \Xjump{1}{\rhys}{\titania}
+        \moveattack{1L, 1U}{Bandit}{1L}
+        \canto{7U}
+    \turnend
+}
+\end{enumerate}
+\end{battle}

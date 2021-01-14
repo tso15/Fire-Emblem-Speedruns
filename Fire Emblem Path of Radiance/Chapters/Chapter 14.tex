@@ -1,0 +1,40 @@
+\begin{battle}{Training}
+\battleinfo{boss}{3}{\ike, \marcia}
+\base{
+    \bexp{
+        \marciaf
+        \begin{itemize}
+            \item Lvl up to 10 (needs 22 STR for Ch15)
+        \end{itemize}
+    }
+}
+\prep{
+    \units{
+        \item Remove everyone except Marcia
+    }
+    \map{
+        \item Move \marcia\ 3U
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \movewait{1D, 5L}
+    \Xmove{1}{\marcia}
+    \moveunequip{6R, 3U}
+}
+\turn{
+    \ikef
+    \movewait{1D, 5L}
+    \Xmove{1}{\marcia}
+    \movewait{7U, 1R}
+}
+\turn{
+    \Xmove{1}{\marcia}
+    \moveattack{5U}{Gashilama}{1U with \textbf{Forged Steel Lance}}
+    \begin{itemize}
+        \item Keep Killer Axe and drop Slim Lance
+    \end{itemize}
+}
+\end{enumerate}
+\end{battle}

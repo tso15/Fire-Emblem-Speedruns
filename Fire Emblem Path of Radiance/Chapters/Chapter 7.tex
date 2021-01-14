@@ -1,0 +1,100 @@
+\end{multicols}
+\begin{battle}{Shades of Evil}
+\begin{multicols}{2}
+\battleinfo{rout}{3}{\ike, \titania, \oscar, \boyd, \soren, \gatrie, \shinon, \mia}
+\prep{
+    \map{
+    \swap{\titania}{\boyd}
+    \swap{\oscar}{\rhys}
+    }
+}
+\begin{enumerate}
+\turn{
+    \sorenf
+    \movewait{4U, 1R}
+    \oscarf
+    \movewait{5U, 2L}
+    \Xmove{1}{\boyd}
+    \movewait{6U}
+    \Xmove{2}{\ike}
+    \movewait{6U}
+    \Xmove{1}{\titania}
+    \moveattack{3L}{Soldier}{2L with \textbf{Javelin}}
+    \canto{6L}
+    \turnend
+}
+\turn{
+    \boydf
+    \moveattack{1U}{Soldier}{1U \textit{(No problem if he misses the attack)}}
+    \oscarf
+    \begin{itemize}
+        \attack{Soldier}{1D}
+    \end{itemize}
+    \ikef
+    \begin{itemize}
+        \item \textit{If \enemy{Soldier} still alive:}
+        \moveattack{1L}{Soldier}{1L with \textbf{Regal Sword}}
+    \end{itemize}
+    \begin{itemize}
+        \item \textit{If \oscar\ killed \enemy{Soldier} (very unlikely):}
+        \begin{itemize}
+        \move{2L}
+        \item Trade with \oscar\ : Chest Key
+        \end{itemize}
+    \end{itemize}
+    \miaf
+    \begin{itemize}
+        \attack{Soldier}{1L}
+    \end{itemize}
+    \Xjump{1}{\ike}{\titania}
+    \moveattack{5L}{Mage}{1L with \textbf{Steel Axe}}
+    \drop{Fire}
+    \canto{1R}
+    \Ymove{2U}{\shinon}
+    \moveattack{2L}{Archer}{2D}
+    \gatrief
+    \movewait{4L}
+    \turnend
+}
+\columnbreak
+\turn{
+    \ikef
+    \moveattack{1L}{Soldier}{1L}
+    \Xmove{1}{\titania}
+    \moveattack{1L}{Thief}{2L with \textbf{Short Spear}}
+    \canto{3R, 5U \textit{(Only 3R if she doesn't kill \enemy{Thief})}}
+    \Ymove{2U}{\shinon}
+    \moveattack{1D}{Myrmidon}{2U}
+    \gatrief
+    \moveattack{3R}{Soldier}{1R}
+    \turnend
+}
+\turn{
+    \item \textit{From here on out, there’s a lot of variance on what can happen, varying from characters missing to enemies surviving and so on.}
+    \vspace{3mm}
+    \Xmove{1}{\titania}
+    \begin{itemize}
+        \item \textit{If \enemy{Thief} is still alive, kill him and then go for \enemy{Soldier}, else}
+    \end{itemize}
+    \moveattack{2U}{Soldier}{1U with \textbf{Steel Axe}}
+    \canto{4R, 2U}
+    \item \textit{If any enemy is still alive near \shinon\ / \gatrie\, kill them prioritizing using \shinon}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\titania}
+    \moveattack{1R, 6U}{Priest}{1U with \textbf{Short Spear}}
+    \canto{1U}
+    \turnend
+    \drop{Vulnerary}
+}
+\turn{
+    \Xmove{1}{\titania}
+    \begin{itemize}
+        \attack{Knight}{1L with \textbf{Steel Axe}} 
+    \end{itemize}
+}
+\end{enumerate}
+\end{multicols}
+\end{battle}
+\begin{multicols}{2}

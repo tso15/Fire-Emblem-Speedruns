@@ -1,0 +1,140 @@
+\begin{battle}{Crimea Marches}
+\battleinfo{rout}{7}{\ike, \marcia, \titania, \tanith, \reyson}
+\base{
+    \outfit{
+        \ikef
+        \begin{itemize}
+            \item Convoy:
+            \begin{itemize}
+                \item Give Elixir and Antitoxin
+            \end{itemize}
+            \item Trade:
+            \begin{itemize}
+                \marciaf\ Pegasus Band for Knight Band
+            \end{itemize}
+            \item Equip: Knight Band
+        \end{itemize}
+        \marciaf
+        \begin{itemize}
+            \item List:
+            \begin{itemize}
+                \item Trade Chest Key and Full Guard for Gamble and Vulnerary
+            \end{itemize}
+            \item Convoy:
+            \begin{itemize}
+                \item Give Short Spear
+            \end{itemize}
+            \item Equip: Full Guard
+            \item Shop:
+            \begin{itemize}
+                \item Forge: \textbf{Javelin \#3} with max Atk, Hit, Crit (11, 85, 9)
+            \end{itemize}
+        \end{itemize}
+    }
+    \bexp{
+        \ikef
+        \begin{itemize}
+            \item Lvl up to 3 (You want to hit 21 STR)
+        \end{itemize}
+        \marciaf
+        \begin{itemize}
+            \item Lvl up to 20
+        \end{itemize}
+    }
+}
+\vspace{3mm} Say Yes to the hawks (1st option)
+\prep{
+    \units{
+        \item Remove everyone except \marcia, \titania, \tanith, \reyson
+    }
+    \map{
+        \item Move \reyson\ 2L
+        \item Move \titania 1L, 1U
+        \item Move \marcia 2L, 2U
+    }
+}
+\vspace{3mm}
+\textit{Note: Drop any weapon \marcia picks up in this Chapter}
+\begin{enumerate}
+\turn{
+    \marciaf
+    \moveattack{3L, 6U}{Soldier}{1L with \textbf{Killer Lance}}
+    \canto{1D}
+    \Xoff{\ike}
+    \moveshove{1U, 1L}{\reyson}
+    \reysonf
+    \begin{itemize}
+        \move{1L, 4U}
+        \item Chant \marcia
+    \end{itemize}
+    \marciaf
+    \moveattack{2R, 1U}{Halberdier}{2U with \textbf{Javelin \#3}}
+    \canto{4R, 4U}
+    \Xmove{1}{\titania}
+    \movewait{2L, 6U}
+    \tanithf
+    \begin{itemize}
+        \move{5L, 2U}
+        \item Rescue \reyson
+    \end{itemize}
+    \canto{2R}
+}
+\end{enumerate}
+\end{battle}
+
+\begin{tcolorbox}[title=\begin{center}Chapter 18 - Crimea Marches\end{center},colbacktitle=blue!50!white]
+\begin{enumerate}
+\setcounter{enumi}{1}
+\turn{
+    \ikef
+    \movewait{6R}
+    \Xmove{1}{\marcia}
+    \moveattack{1U, 6R}{Mage}{1L, 1U}
+    \canto{1R, 3D}
+    \Xmove{1}{\titania}
+    \moveattack{1U}{Archer}{1U}
+    \canto{8D}
+    \Xmove{1}{\tanith}
+    \movewait{4D, 1R}
+}
+\turn{
+    \ikef
+    \moveattack{1R, 1U}{Wyvern}{1U}
+    \Xmove{1}{\marcia}
+    \begin{itemize}
+        \move{6R, 1U}
+        \item Open chest (Wrath)
+    \end{itemize}
+    \Xmove{1}{\titania}
+    \movewait{2R}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\marcia}
+    \moveattack{2D, 3R}{Mage}{1R}
+    \canto{6U}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\marcia}
+    \movewait{2L, 7U, 2L}
+    \turnend
+    \begin{itemize}
+        \item \textit{By the end of enemy phase, all enemies besides the laguz should be dead}
+    \end{itemize}
+}
+\turn{
+    \Xmove{1}{\marcia}
+    \moveattack{1L}{Laguz}{1L with \textbf{Killer Lance}}
+    \canto{1D, 1L}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\marcia}
+    \begin{itemize}
+        \attack{Laguz}{1L or 1D}
+    \end{itemize}
+    \turnend
+}
+\end{enumerate}
+\end{tcolorbox}

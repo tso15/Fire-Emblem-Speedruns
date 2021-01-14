@@ -1,0 +1,56 @@
+\begin{battle}{The Great Bridge}
+\battleinfo{Seize}{4}{\ike, \marcia}
+\base{
+    \outfit{
+        \marciaf
+        \begin{itemize}
+            \item Convoy:
+            \begin{itemize}
+                \item Give Forged Javelin
+            \end{itemize}
+            \item Shop:
+            \begin{itemize}
+                \item Forge: \textbf{Slim Sword} with max Atk, Crit (8, 14)
+            \end{itemize}
+        \end{itemize}
+    }
+}
+\prep{
+    \units{
+        \item Remove everyone except \marcia
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \movewait{3L}
+    \marciaf
+    \begin{itemize}
+        \equip{Forged Slim Sword}
+        \item Rescue \ike
+    \end{itemize}
+    \canto{2U, 9L}
+}
+\turn{
+    \marciaf
+    \moveattack{1U, 10L}{Cavalier}{1L}
+}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \move{9L}
+        \unequip
+        \drop{\ike\ left}
+    \end{itemize}
+}
+\turn{
+    \marciaf
+    \moveattack{5L}{Petrine}{1U with \textbf{Forged Silver Lance}}
+    \ikef
+    \begin{itemize}
+        \move{4L, 1U}
+        \item Seize
+    \end{itemize}
+}
+\end{enumerate}
+\end{battle}

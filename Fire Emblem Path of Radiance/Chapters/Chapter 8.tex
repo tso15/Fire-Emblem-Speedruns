@@ -1,0 +1,67 @@
+\begin{battle}{Despair and Hope}
+\battleinfo{Defend for 8 turns}{8}{\ike, \titania, \soren, \oscar, \boyd}
+\base{
+    \outfit{
+        \ikef
+        \begin{itemize}
+            \item Convoy:
+            \begin{itemize}
+                \item Give all \textbf{Iron Swords} and \textbf{Vulneraries}
+                \item Take \textbf{Elixir} and \textbf{Knight Band}
+            \end{itemize}
+            \item Equip: \textbf{Knight Band}
+        \end{itemize}
+    }
+    \bexp{
+        \ikef
+        \begin{itemize}
+            \item Lvl up to 12
+        \end{itemize}
+        }
+}
+\prep{
+    \units{
+    \item Remove \mia\ and \rhys
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \movewait{2D, 1R}
+    \turnend
+}
+\turn{
+    \ikef
+    \begin{itemize}
+        \attack{Cavalier}{1D}
+    \end{itemize}
+    \titaniaf
+    \moveunequip{3R, 1U}
+    \Xmove{1}{\soren}
+    \moveunequip{1L, 1D}
+    \Xmove{1}{\oscar}
+    \movewait{2R, 1U}
+    \Xmove{1}{\boyd}
+    \movewait{1D, 3L}
+}
+\turn{
+    \ikef
+    \moveunequip{2R}
+    \titaniaf
+    \movewait{1D, 2L}
+    \item (X 1L) \boyd:
+    \movewait{5R, 1U}
+    \Xmove{1}{\soren}
+    \movewait{1L}
+    \turnend
+    \item On Enemy Phase:
+    \begin{itemize}
+        \item \textit{A \enemy{Knight} with a javelin should move into the space above \ike\ and attack him, as long as \ike\ is unequipped and Oscar/Boyd are armed. He should almost always miss, and if he hits, he only does 3-4 damage}
+    \end{itemize}
+}
+\end{enumerate}
+\vspace{3mm}
+\begin{itemize}
+    \item End turn until Chapter is done
+\end{itemize}
+\end{battle}

@@ -1,0 +1,84 @@
+\begin{battle}{Clash!}
+\battleinfo{Seize}{4}{\ike, \marcia, \elincia}
+\newline\newline Skip Base
+\prep{
+    \units{
+        \item Remove everyone except \marcia
+    }
+    \map{
+        \item Move \marcia\ 1U, 5L
+    }
+    \item Item:
+    \begin{itemize}
+        \item \elincia:
+        \begin{itemize}
+            \item Trade:
+            \begin{itemize}
+                \item \tanith: Take Rescue
+            \end{itemize}
+        \end{itemize}
+        \item \marcia:
+        \begin{itemize}
+            \item List:
+            \begin{itemize}
+                \item Take \textbf{Forged Steel Lance} replacing \textbf{Spear}
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \moveunequip{3L, 3U}
+    \Xmove{1}{\elincia}
+    \begin{itemize}
+        \move{4L, 1U}
+        \unequip
+        \use{Rescue on \marcia}
+    \end{itemize}
+    \canto{4D}
+    \Xmove{1}{\marcia}
+    \begin{itemize}
+        \item Equip/Unequip Forged Silver Lance
+        \item Equip Laguzguard
+        \item Rescue \ike
+    \end{itemize}
+    \canto{8L, 3U}
+}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \move{1L, 9U}
+        \item \textit{If damaged, use Elixir}
+        \wait
+    \end{itemize}
+}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \move{2U, 8L}
+        \item Equip Forged Steel Lance
+        \item Drop \ike\ left
+    \end{itemize}
+    \canto{1U}
+    \Xmove{1}{\elincia}
+    \movewait{1D, 8R}
+    \item On Enemy Phase:
+    \begin{itemize}
+        \item Drop whatever \marcia\ gets
+    \end{itemize}
+}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \attack{Bertram}{1U with \textbf{Forged Silver Lance}}
+        \item Drop Runesword
+    \end{itemize}
+    \ikef
+    \begin{itemize}
+        \move{1R, 2U}
+        \item Seize
+    \end{itemize}
+}
+\end{enumerate}
+\end{battle}

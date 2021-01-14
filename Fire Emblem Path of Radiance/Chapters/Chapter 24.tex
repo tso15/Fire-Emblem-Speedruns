@@ -1,0 +1,65 @@
+\begin{battle}{Battle Reunion}
+\battleinfo{Arrive in 15 turns}{3}{\ike, \marcia, \tanith, \reyson, \calill, \mordecai, \muarim}
+\newline\newline Skip Base
+\prep{
+    \units{
+        \item Remove everyone below \reyson\ , except \calill\ and \mordecai
+        \item Select \muarim
+    }
+    \map{
+        \item Move \marcia\ 1U, 1L
+        \item Move \reyson\ 2U, 1L
+    }
+}
+\begin{enumerate}
+\turn{
+    \calillf
+    \moveshove{4L}{\reyson}
+    \Xmove{1}{\mordecai}
+    \moveshove{4L, 1D}{\marcia}
+    \Xmove{1}{\muarim}
+    \begin{itemize}
+        \move{4L}
+        \item Smite \reyson
+    \end{itemize}
+    \Xmove{1}{ike}
+    \moveshove{3L, 3U}{\reyson}
+    \Xmove{1}{\marcia}
+    \moveunequip{10U, 1L}
+    \Xmove{1}{\tanith}
+    \moveunequip{8U. 1R}
+    \Xmove{1}{\reyson}
+    \begin{itemize}
+        \move{5U}
+        \item Chant \marcia
+    \end{itemize}
+    \marciaf
+    \begin{itemize}
+        \item Rescue \reyson
+    \end{itemize}
+    \canto{8U. 3L}
+}
+\turn{
+    \ikef
+    \movewait{1D, 1R}
+    \Xmove{1}{\marcia}
+    \moveattack{1L}{Swordmaster}{1L}
+    \canto{10L}
+    \Xmove{1}{\tanith}
+    \movewait{3L, 5U}
+    \turnend
+}
+\turn{
+    \Xmove{2}{\tanith}
+    \begin{itemize}
+        \move{3L, 4U}
+        \item Visit Village for Savior
+    \end{itemize}
+    \Ymove{1U}{\marcia}
+    \begin{itemize}
+        \move{9L, 2U}
+        \item Arrive
+    \end{itemize}
+}
+\end{enumerate}
+\end{battle}

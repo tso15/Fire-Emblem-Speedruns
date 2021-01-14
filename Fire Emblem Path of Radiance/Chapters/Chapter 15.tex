@@ -1,0 +1,27 @@
+\begin{battle}{The Feral Frontier}
+\battleinfo{boss}{2}{\ike, \marcia, \volke, \mordecai}
+\newline\newline Skip Base
+\prep{
+    \units{
+        \item Remove \lethe
+    }
+    \map{
+        \swap{\marcia}{\gatrie}
+        \swap{\volke}{Mist}
+    }
+}
+\begin{enumerate}
+\turn{
+    \volkef
+    \moveunequip{6U}
+    \item (1X 1U) \marcia:
+    \movewait{8U}
+}
+\turn{
+    \item (1X 1D, 2R) \volke:
+    \movewait{5U}
+    \marciaf
+    \moveattack{5L, 4U}{Muarim}{1U with \textbf{Forged Steel Lance}}
+}
+\end{enumerate}
+\end{battle}

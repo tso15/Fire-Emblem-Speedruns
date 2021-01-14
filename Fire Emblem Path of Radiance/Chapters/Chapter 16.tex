@@ -1,0 +1,123 @@
+\begin{battle}{The Atonement}
+\battleinfo{Seize}{5}{\ike, \marcia, \volke, \titania}
+\base{
+    \outfit{
+    \marciaf
+    \begin{itemize}
+        \item Trade:
+        \begin{itemize}
+            \titaniaf\ Killer Axe for Short Spear
+            \volkef\ Occult for Boots
+        \end{itemize}
+        \item Convoy:
+        \begin{itemize}
+            \item Give normal Javelin
+        \end{itemize}
+        \item Use: Boots
+        \item Shop:
+            \begin{itemize}
+                \item Forge: \textbf{Javelin \#2} with max Atk, Hit, Crit (11, 85, 9)
+            \end{itemize}
+    \end{itemize}
+    }
+    \bexp{
+        \ikef
+        \begin{itemize}
+            \item Lvl up to 20
+        \end{itemize}
+        \marciaf
+        \begin{itemize}
+            \item Lvl up to 17
+        \end{itemize}
+    }
+}
+\prep{
+    \map{
+    \volkef
+    \begin{itemize}
+        \item Move 2D, 4R
+    \end{itemize}
+    \titaniaf
+    \begin{itemize}
+        \item Move 3R, 1U
+    \end{itemize}
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \begin{itemize}
+        \item \textit{Should be already unequiped, if he's not, unequip}
+    \end{itemize}
+    \marciaf
+    \begin{itemize}
+        \item Rescue \ike
+    \end{itemize}
+    \canto{9R, 1U}
+    \Xmove{1}{\volke}
+    \moveunequip{1U}
+    \titaniaf
+    \begin{itemize}
+        \item Unequip
+        \item Rescue \volke
+    \end{itemize}
+    \movewait{7R, 2U}
+    \turnend
+}
+\turn{
+    \marciaf
+    \moveattack{6R, 5U}{Mage}{1U, 1R with \textbf{Short Spear}}
+    \titaniaf
+    \moveattack{7R, 2U}{Myrmidon}{1D with \textbf{Forged Steel Axe}}
+    \turnend
+}
+\turn{
+    \marciaf
+    \moveunequip{3U, 3L}
+    \titaniaf
+    \begin{itemize}
+        \move{7U, 2L}
+        \equip{Killer Axe}
+        \use{Vulnerary \textit{if needed}}
+    \end{itemize}
+    \turnend
+}
+\end{enumerate}
+\end{battle}
+
+\begin{tcolorbox}[title=\begin{center}Chapter 16 - The Atonement\end{center},colbacktitle=blue!50!white]
+\begin{enumerate}
+\setcounter{enumi}{3}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \move{2L, 5U}
+        \equip{Forged Javelin \#1}
+        \item Drop \ike\ right
+    \end{itemize}
+    \titaniaf
+    \begin{itemize}
+        \move{3D, 6L}
+        \item Drop \volke\ right
+    \end{itemize}
+    \turnend
+}
+\turn{
+    \marciaf
+    \moveattack{2L, 2U}{Kimaarsi}{1U with \textbf{Forged Steel Lance}}
+    \drop{Forged Steel Axe}
+    \Xmove{1}{\titania}
+    \moveattack{1L}{Door}{1D}
+    \volkef
+    \begin{itemize}
+        \move{1L, 2D}
+        \item Open right chest (Full Guard)
+    \end{itemize}
+    \Xoff{\ike}
+    \begin{itemize}
+        \move{3L, 3U}
+        \item Seize
+    \end{itemize}
+}
+\end{enumerate}
+\end{tcolorbox}

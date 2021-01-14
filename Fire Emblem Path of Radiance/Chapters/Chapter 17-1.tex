@@ -1,0 +1,42 @@
+\begin{battle}{Day Breaks}
+\battleinfo{rout}{2}{\ike, \marcia}
+\base{
+    \outfit{
+        \ikef
+        \begin{itemize}
+            \item List: Energy Drop (replace Vulnerary if he still has one)
+            \item Shop:
+            \begin{itemize}
+                \item Shop: 2 Pure Water (1 for himself, 1 for \marcia)
+                \item Forge: \textbf{Steel Sword} with max Atk, Hit, Crit (13, 100, 9)
+                \end{itemize}
+        \end{itemize}
+    }
+}
+\prep{
+    \units{
+    \item Remove everyone except \marcia
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \begin{itemize}
+        \move{2L, 4U}
+        \equip{Forged Steel Sword}
+        \use{Energy Drop}
+    \end{itemize}
+    \Xmove{1}{\marcia}
+    \moveattack{9U}{Myrmidon}{2L with \textbf{Forged Javelin \#1}}
+    \canto{1U, 1R}
+}
+\turn{
+    \ikef
+    \moveattack{3U}{Fighter}{1D}
+    \Xmove{1}{\marcia}
+    \moveattack{11U}{Mage}{2U with \textbf{Forged Javelin \#2}}
+}
+\end{enumerate}
+\vspace{3mm}
+\drop{Forged Javelin \#1 if it didn't break to keep Killer Lance}
+\end{battle}

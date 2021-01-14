@@ -1,0 +1,45 @@
+\begin{battle}{Pirates Agroud}
+\battleinfo{boss}{3}{\ike, \titania, \shinon, \gatrie}
+\begin{enumerate}
+\turn{
+    \ikef
+    \movewait{1L, 5U}
+    \Xmove{1}{\titania}
+    \moveattack{2L, 5U}{Pirate}{1U}
+    \Xmove{1}{\shinon}
+    \movewait{4U}
+    \Xmove{1}{\gatrie}
+    \movewait{1U, 4R}
+    \turnend
+}
+\turn{
+    \ikef
+    \movewait{4U, 2L}
+    \Xmove{1}{\titania}
+    \movewait{2L, 7U}
+    \Xmove{1}{\shinon}
+    \movewait{3U, 4L}
+    \Xmove{1}{\gatrie}
+    \movewait{4R}
+    \turnend
+}
+\turn{
+    \ikef
+    \begin{itemize}
+        \move{5U}
+        \item Talk to Marcia
+    \end{itemize}
+    \Ymove{1U}{\gatrie}
+    \begin{itemize}
+        \move{2L, 1U}
+        \item Visit Village for Elixir
+    \end{itemize}
+    \Xmove{1}{\titania}
+    \moveattack{2U, 7R}{Havetti}{1R}
+}
+\end{enumerate}
+\vspace{3mm}
+\begin{itemize}
+    \item \textit{\titania\ typically has a 85\%-95\% displayed hitrate on the boss. There isn’t really a backup for her missing, either safety save or reset the run or just end turn and bite the timeloss.}
+\end{itemize}
+\end{battle}

@@ -1,0 +1,92 @@
+\begin{battlespecial}{Endgame - Repatriation}
+\battleinfo{Defeat Ashnard}{2}{\ike, \marcia, \tanith, \reyson, \elincia, \mordecai}
+\base{
+    \item Manage:
+    \begin{itemize}
+        \item Skills:
+        \begin{itemize}
+            \item \ike:
+            \begin{itemize}
+                \item Assign Wrath and Resolve
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+}
+\prep{
+    \units{
+        \item Remove Mist
+    }
+    \map{
+        \swap{Ena}{\elincia}
+        \swap{Ena}{\tanith}
+        \swap{\reyson}{\mordecai}
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \movewait{4U, 1R}
+    \Xmove{2}{\elincia}
+    \movewait{7U}
+    \Xmove{1}{\marcia}
+    \moveunequip{6U}
+    \item (X 2R) \mordecai:
+    \begin{itemize}
+        \move{1U, 1R}
+        \item Smite \reyson
+    \end{itemize}
+    \reysonf
+    \movewait{2L, 3U}
+    \Xmove{1}{\tanith}
+    \moveunequip{9U}
+    \item On Enemy Phase:
+    \begin{itemize}
+        \item \tanith\ will probably die, but is intended and faster. Her role is to lure the \enemy{Generals} out of the way.
+    \end{itemize}
+    \turnend
+}
+\turn{
+    \item Choose whatever laguz royal, it doesn't matter
+    \ikef
+    \moveuse{1R}{Pure Water}
+    \marciaf
+    \begin{itemize}
+        \item Rescue \ike
+    \end{itemize}
+    \canto{1L, 10U}
+    \item (2X 1U) \elincia:
+    \begin{itemize}
+        \move{2R, 2U}
+        \use{Rescue on \reyson}
+    \end{itemize}
+    \canto{3D}
+    \reysonf
+    \begin{itemize}
+        \move{5U}
+        \item Chant Marcia
+    \end{itemize}
+    \marciaf
+    \begin{itemize}
+        \move{11U}
+        \item Drop \ike\ left
+    \end{itemize}
+    \turnend
+}
+\end{enumerate}
+\end{battlespecial}
+
+\begin{tcolorbox}[title=\begin{center}Endgame - Repatriation\end{center},colbacktitle=blue!50!white]
+\begin{itemize}
+    \item A bishop should attempt to put \marcia\ to sleep. The result of this doesn’t matter.
+    Then \enemy{Ashnard} should move towards \ike\ and attack.
+    \vspace{2mm}
+    \item Ideal outcome: \enemy{Ashnard} hits \ike\ (displayed ~65-85\%) and activates Resolve + Wrath and gets a crit (two chances of 50\% crit rates)
+
+    \item Other outcomes:
+    \begin{itemize}
+        \item \enemy{Ashnard} hits \ike\, but \ike\ doesn’t crit: just finish off \enemy{Ashnard} during next player phase. \ike\ has a 100\% hitrate with resolve, so he’s guaranteed to kill \enemy{Ashnard}
+        \item \enemy{Ashnard} misses \ike\ (he has a 63-83\% displayed hitrate): the game hates you. Run away with \marcia\ (all right all down), run away with \elincia\, have \ike\ stay in place, and really hope he gets hit next enemy phase.
+        \item If \#2 happens and \enemy{Ashnard} misses \ike\ AGAIN: the game hates you. Game Over.
+    \end{itemize}
+\end{itemize}
+\end{tcolorbox}

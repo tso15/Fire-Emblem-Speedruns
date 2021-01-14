@@ -1,0 +1,112 @@
+\begin{battle}{Gallia}
+\battleinfo{Seize}{8}{\ike, \titania, \marcia}
+\base{
+    \outfit
+    \titaniaf
+    \begin{itemize}
+            \item Convoy:
+            \begin{itemize}
+                \item Give used \textbf{Steel Axe}
+            \end{itemize}
+            \item Shop:
+            \begin{itemize}
+                \item Forge: \textbf{Steel Axe} with max Atk, Hit, Crit (16, 90, 9)
+            \end{itemize}
+    \end{itemize}
+    \skills{
+        \titaniaf
+        \begin{itemize}
+        \item Remove: Counter
+        \end{itemize}
+    }
+}
+\prep{
+    \units{
+    \item Remove everyone except \titania
+    }
+}
+\begin{enumerate}
+\turn{
+    \ikef
+    \begin{itemize}
+        \move{6D}
+        \equip{Regal Sword}
+        \item \textbf{\underline{Direct: Halt}}
+        \wait
+    \end{itemize}
+    \Xmove{1}{\titania}
+    \moveequip{8D, 1L}{Forged Steel Axe}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\titania}
+    \moveattack{2L}{Mage}{1L}
+    \canto{4L}
+    \turnend
+}
+\turn{
+    \ikef
+    \movewait{1L, 3D}
+    \titaniaf
+    \moveattack{2D, 7L}{Archer}{1L with \textbf{Javelin}}
+    \canto{1L}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\titania}
+    \moveattack{1L}{Soldier}{1L with \textbf{Forged Steel Axe}}
+    \canto{1L}
+    \turnend
+}
+\end{enumerate}
+\end{battle}
+
+\begin{tcolorbox}[title=\begin{center}Chapter 9 - Gallia\end{center},colbacktitle=blue!50!white]
+\begin{enumerate}
+\setcounter{enumi}{4}
+\turn{
+    \Xmove{1}{\titania}
+    \begin{itemize}
+        \item \textit{If HP > 23}:
+        \moveattack{2U}{Kotaff}{1U}
+        \drop{Arms Scroll}
+        \canto{2D}
+        \item \textit{If HP < 24}:
+        \begin{itemize}
+            \item Same strat as above, but have a chance of dying (6\% of activating Counter (10HP) + 20\% of getting hit by the attack (13HP))
+	\end{itemize}
+       \item \textit{Safe strat (or if HP < 13)}:
+        \begin{itemize}
+            \move{1U}
+            \attack{Kotaff}{2U with \textbf{Javelin}}
+            \canto{1D}
+            \item Finish him next turn with Forged Steel Axe (Canto at least 2D after killing blow)
+            \end{itemize}
+    \end{itemize}
+    \turnend
+}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \item Rescue Ike
+        \movewait{3D, 5L}
+    \end{itemize}
+    \turnend
+}
+\turn{
+    \marciaf
+    \begin{itemize}
+        \move{8L}
+        \item Drop \ike\ up
+    \end{itemize}
+    \turnend
+}
+\turn{
+    \ikef
+    \begin{itemize}
+        \move{4L, 2U}
+        \item Seize
+    \end{itemize}
+}
+\end{enumerate}
+\end{tcolorbox}

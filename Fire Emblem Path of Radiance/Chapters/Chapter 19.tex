@@ -1,0 +1,46 @@
+\begin{battle}{Entrusted}
+\battleinfo{boss}{1}{\ike, \marcia, \reyson, \boyd, \rhys, \gatrie, \mordecai, \ulki}
+\newline\newline Skip Base
+\prep{
+    \map{
+    \swap{\reyson}{\titania}
+    \swap{\marcia}{\astrid}
+    }
+}
+\begin{enumerate}
+\turn{
+    \ulkif
+    \moveshove{3U, 2R}{\reyson}
+    \rhysf
+    \moveshove{3R, 1D}{\reyson}
+    \Xmove{1}{\gatrie}
+    \moveshove{5R}{\reyson}
+    \item (2X 1R) \boyd:
+    \moveshove{4R, 2U}{\reyson}
+    \item (2X on \gatrie) \mordecai:
+    \begin{itemize}
+        \move{4R, 1D}
+        \item Smite \marcia
+    \end{itemize}
+    \ikef
+    \moveshove{3R, 4U}{\reyson}
+    \item (X on \boyd) \volke:
+    \moveshove{2R, 4U}{\reyson}
+    \Xoff{\marcia}
+    \movewait{1R, 10U}
+    \reysonf
+    \begin{itemize}
+        \move{5U}
+        \item Chant \marcia
+    \end{itemize}
+    \marciaf
+    \moveattack{1R, 10U}{Homasa}{2R with \textbf{Forged Javelin \#3}}
+}
+\end{enumerate}
+\vspace{3mm}
+\begin{itemize}
+    \item \textit{This strategy can fail is \marcia\ misses the boss and doesn’t crit at all. She has a 100\% hitrate unless she has bad biorhythm and the boss has good biorhythm, where the hitrate will be around displayed ~95\%ish.}
+    \vspace{3mm}
+    \item \textbf{Don't promote \volke\ (2nd option)}
+\end{itemize}
+\end{battle}

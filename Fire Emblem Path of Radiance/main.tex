@@ -1,0 +1,229 @@
+\documentclass[a4paper]{report}
+\usepackage[group-separator={,},group-minimum-digits={3}]{siunitx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage[margin=0.2in]{geometry}
+\usepackage{xstring}
+\usepackage{xifthen}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\pagenumbering{gobble}
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{0.2pt}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{titlepic}
+\usepackage{enumitem}
+
+\setlist{nosep}
+
+\hypersetup{
+    colorlinks=true,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  %\vspace*{5\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \large\bfseries #1
+        \par\nobreak
+%        \vskip 10\p@
+        \rule{\columnwidth}{.1pt}%
+%        \vskip 10\p@
+    \fi
+    \interlinepenalty\@M
+%    \large \bfseries \MakeUppercase{#1}\par\nobreak
+%    \vskip 5\p@
+  }}
+\makeatother
+
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\usepackage{graphicx}
+\title{Fire Emblem: Path of Radiance Speedrun Notes}
+\author{Formatting by Tso15
+\\ Original notes by \textbf{kirbymash}
+\\ Route updates by \textbf{quo}}
+\date{January 2021}
+\titlepic{\includegraphics[width=\textwidth]{FEPR_logo.png}}
+\begin{document}
+\singlespacing
+\maketitle
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\newcounter{chaptercount}
+
+\newenvironment{battlespecial}[1]{\begin{tcolorbox}[title=\begin{center}#1\end{center},colbacktitle=blue!50!white]}{\end{tcolorbox}}
+\newenvironment{battle}[1]{\refstepcounter{chaptercount} \begin{tcolorbox}[title=\begin{center}Chapter \thechaptercount\ - #1\end{center},colbacktitle=blue!50!white]}{\end{tcolorbox}}
+
+
+\newcommand{\battleinfo}[3]{Goal: \ifthenelse{\equal{#1}{rout}}{Rout the Enemy}{\ifthenelse{\equal{#1}{boss}}{Defeat the Boss}{#1}} \newline Turns: #2 \newline Units: #3}
+
+
+\newenvironment{shop}[1]{\begin{tcolorbox}[title=\begin{center}SHOP\, #1 GOLD\end{center},colbacktitle=green!50!white]}{\end{tcolorbox}}
+
+\newcommand{\cs}[1][]{\textbf{CS}%
+	\ifthenelse{\isempty{#1}}{}{ (#1)}%
+}
+
+\setlist[enumerate]{label={Turn \arabic*:\newline}, align=left}
+%\setlist[itemize]{align=left}
+
+\newcommand{\ike}{\textbf{\textcolor{blue}{Ike}}}
+\newcommand{\oscar}{\textbf{\textcolor{ForestGreen}{Oscar}}}
+\newcommand{\titania}{\textbf{\textcolor{OrangeRed}{Titania}}}
+\newcommand{\rhys}{\textbf{\textcolor{Dandelion}{Rhys}}}
+\newcommand{\shinon}{\textbf{\textcolor{gray}{Shinon}}}
+\newcommand{\gatrie}{\textbf{\textcolor{RoyalBlue}{Gatrie}}}
+\newcommand{\soren}{\textbf{\textcolor{black}{Soren}}}
+\newcommand{\boyd}{\textbf{\textcolor{Emerald}{Boyd}}}
+\newcommand{\marcia}{\textbf{\textcolor{Lavender}{Marcia}}}
+\newcommand{\mia}{\textbf{\textcolor{Magenta}{Mia}}}
+\newcommand{\lethe}{\textbf{\textcolor{YellowOrange}{Lethe}}}
+\newcommand{\volke}{\textbf{\textcolor{brown}{Volke}}}
+\newcommand{\mordecai}{\textbf{\textcolor{Turquoise}{Mordecai}}}
+\newcommand{\astrid}{\textbf{\textcolor{RawSienna}{Astrid}}}
+\newcommand{\tanith}{\textbf{\textcolor{Tan}{Tanith}}}
+\newcommand{\reyson}{\textbf{\textcolor{CadetBlue}{Reyson}}}
+\newcommand{\ulki}{\textbf{\textcolor{Sepia}{Ulki}}}
+\newcommand{\calill}{\textbf{\textcolor{Plum}{Calill}}}
+\newcommand{\tauroneo}{\textbf{\textcolor{Thistle}{Tauroneo}}}
+\newcommand{\muarim}{\textbf{\textcolor{TealBlue}{Muarim}}}
+\newcommand{\largo}{\textbf{\textcolor{Sepia}{Largo}}}
+\newcommand{\geoffrey}{\textbf{\textcolor{SkyBlue}{Geoffrey}}}
+\newcommand{\elincia}{\textbf{\textcolor{SeaGreen}{Elincia}}}
+\newcommand{\enemy}[1]{\textbf{\textcolor{red}{#1}}}
+
+
+\newcommand{\autoturn}{\turn{\auto}}
+\newcommand{\autoblitz}{\item Set Auto to \textbf{Blitz}}
+\newcommand{\autocustom}{\item Set Auto to \textbf{Custom}}
+\newcommand{\auto}{\item Auto}
+\newcommand{\pair}[2]{\item Pair #1 to #2}
+\newcommand{\move}[1]{\item Move #1}
+\newcommand{\attack}[2]{\item Attack \enemy{#1} #2}
+\newcommand{\attacks}[2]{\ Attack \enemy{#1} #2}
+\newcommand{\wait}{\item Wait}
+\newcommand{\turn}[1]{\item \ \begin{itemize} #1 \end{itemize}}
+\newcommand{\turnend}{\item End}
+\newcommand{\trade}[3]{\item Trade with #1: #2 for #3}
+\newcommand{\use}[1]{\item Use #1}
+\newcommand{\equip}[1]{\item Equip #1}
+\newcommand{\unequip}{\item Unequip}
+\newcommand{\shove}[1]{\item Shove #1}
+\newcommand{\movewait}[1]{\begin{itemize}\move{#1}\wait\end{itemize}}
+%\newcommand{\movewait}[1]{\ Move [{#1}], Wait}
+\newcommand{\moveuse}[2]{\begin{itemize}\move{#1}\use{#2}\end{itemize}}
+\newcommand{\moveequip}[2]{\begin{itemize}\move{#1}\equip{#2}\wait\end{itemize}}
+\newcommand{\moveunequip}[1]{\begin{itemize}\move{#1}\unequip\wait\end{itemize}}
+\newcommand{\moveattack}[3]{\begin{itemize}\move{#1}\attack{#2}{#3}\end{itemize}}
+\newcommand{\moveshove}[2]{\begin{itemize}\move{#1}\shove{#2}\end{itemize}}
+\newcommand{\map}[1]{\item Reposition: \begin{itemize}#1\end{itemize}}
+\newcommand{\swap}[2]{\item Switch #1 with #2}
+\newcommand{\canto}[1]{\begin{itemize}\item Canto #1\end{itemize}}
+\newcommand{\drop}[1]{\begin{itemize}\item Drop #1\end{itemize}}
+
+\newcommand{\dance}[3]{\oliviaf \begin{itemize}\move{#1}\item Dance for #2 #3\end{itemize}}
+\newcommand{\rally}[1]{\lucinaf \begin{itemize}\move{#1}\item Rally\end{itemize}}
+
+\newcommand{\units}[1]{\item Chose Units: \begin{itemize} #1 \end{itemize}}
+\newcommand{\remove}[1]{\item Remove #1}
+\newcommand{\add}[1]{\item Add #1}
+
+\newcommand{\base}[1]{\newline\newline Base: \begin{itemize} #1 \end{itemize}}
+\newcommand{\prep}[1]{Advancement: \begin{itemize} #1 \end{itemize}}
+\newcommand{\outfit}[1]{\item Outfit: \begin{itemize} #1 \end{itemize}}
+\newcommand{\bexp}[1]{\item Manage: \begin{itemize}\item Award Exp: \begin{itemize}#1\end{itemize}\end{itemize}}
+\newcommand{\skills}[1]{\item Manage: \begin{itemize}\item Skills: \begin{itemize}#1\end{itemize}\end{itemize}}
+
+\newcommand{\support}[3]{\item Support #1 to #2, Rank #3}
+
+\newcommand{\Xmove}[2]{\item (#1X) #2:}
+\newcommand{\Xjump}[3]{\item (#1X on #2) #3:}
+\newcommand{\Xoff}[1]{\item (Off X) #1:}
+\newcommand{\Ymove}[2]{\item (Y #1) #2:}
+
+\newcommand{\ikef}{\item \ike:}
+\newcommand{\oscarf}{\item \oscar:}
+\newcommand{\titaniaf}{\item \titania:}
+\newcommand{\rhysf}{\item \rhys:}
+\newcommand{\gatrief}{\item \gatrie:}
+\newcommand{\shinonf}{\item \shinon:}
+\newcommand{\sorenf}{\item \soren:}
+\newcommand{\boydf}{\item \boyd:}
+\newcommand{\miaf}{\item \mia:}
+\newcommand{\marciaf}{\item \marcia:}
+\newcommand{\volkef}{\item \volke:}
+\newcommand{\astridf}{\item \astrid:}
+\newcommand{\lethef}{\item \lethe:}
+\newcommand{\mordecaif}{\item \mordecai:}
+\newcommand{\tanithf}{\item \tanith:}
+\newcommand{\reysonf}{\item \reyson:}
+\newcommand{\ulkif}{\item \ulki:}
+\newcommand{\calillf}{\item \calill:}
+\newcommand{\tauroneof}{\item \tauroneo:}
+\newcommand{\muarimf}{\item \muarim:}
+\newcommand{\largof}{\item \largo:}
+
+
+\setlength{\columnsep}{.5cm}
+
+\section*{Acknowledgements}
+
+I want to thanks the members on the FE Discord, specially: \textbf{kirbymastah}, \textbf{quo} and \textbf{MrTyton}.
+
+\input{Chapters/Introduction}
+
+\newpage
+\begin{multicols}{2}
+\input{Chapters/Prologue}
+\input{Chapters/Chapter 1}
+\input{Chapters/Chapter 2}
+\input{Chapters/Chapter 3}
+\input{Chapters/Chapter 4}
+\input{Chapters/Chapter 5}
+\input{Chapters/Chapter 6}
+\input{Chapters/Chapter 7}
+\input{Chapters/Chapter 8}
+\input{Chapters/Chapter 9}
+\input{Chapters/Chapter 10}
+\input{Chapters/Chapter 11}
+\input{Chapters/Chapter 12}
+\input{Chapters/Chapter 13}
+\input{Chapters/Chapter 14}
+\input{Chapters/Chapter 15}
+\input{Chapters/Chapter 16}
+\input{Chapters/Chapter 17-1}
+\input{Chapters/Chapter 17-2}
+\input{Chapters/Chapter 17-3}
+\input{Chapters/Chapter 17-4}
+\input{Chapters/Chapter 18}
+\input{Chapters/Chapter 19}
+\input{Chapters/Chapter 20}
+\input{Chapters/Chapter 21}
+\input{Chapters/Chapter 22}
+\input{Chapters/Chapter 23}
+\input{Chapters/Chapter 24}
+\input{Chapters/Chapter 25}
+\input{Chapters/Chapter 26}
+\input{Chapters/Chapter 27}
+\input{Chapters/Chapter 28}
+\input{Chapters/Endgame}
+\end{multicols}
+\end{document}

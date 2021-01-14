@@ -1,0 +1,60 @@
+\begin{battle}{A Brief Diversion}
+\battleinfo{Escape}{6}{\ike, \titania, \oscar, \boyd}
+\begin{enumerate}
+\turn{
+    \boydf
+    \movewait{3U}
+    \Xmove{2}{\titania}
+    \begin{itemize}
+        \item Rescue \ike\
+    \end{itemize}
+    \movewait{3D}
+    \Xmove{1}{\oscar}
+    \begin{itemize}
+        \item Rescue \rhys
+    \end{itemize}
+    \canto{2U}
+    \turnend
+}
+\turn{
+    \titaniaf
+    \movewait{2D, 3L}
+    \turnend
+}
+\turn{
+    \titaniaf
+    \movewait{3L}
+    \turnend
+}
+\turn{
+    \titaniaf
+    \moveattack{4D}{Archer}{1D}
+    \canto{4D, 1R}
+    \turnend
+    \item \textit{Keep watch if \titania\ misses \enemy{Myrmidon} on Enemy Phase}
+}
+\turn{
+    \titaniaf
+    \begin{itemize}
+        \move{4R, 1D}
+        \item \textit{If \titania\ misses \enemy{Myrmidon}:}
+        \begin{itemize}
+            \trade{\ike}{used Iron Sword}{new Iron Sword}
+        \end{itemize}
+        \item Drop \ike\ right
+    \end{itemize}
+    \canto{1D}
+    \turnend
+}
+\turn{
+    \Xmove{1}{\titania}
+    \moveattack{2R, 1D}{Emil}{1D with \textbf{Steel Axe}}
+    \drop{used Iron Axe}
+    \Xoff{\ike}
+    \begin{itemize}
+        \move{1R, 3D}
+        \item Escape
+    \end{itemize}
+}
+\end{enumerate}
+\end{battle}
