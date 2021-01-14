@@ -1,4 +1,5 @@
-\begin{battlespecial}{Grima}
+There are two strats that you can do here - Fast Strat has a high chance of dying, but it's faster. Use the Saftey Strat if you don't want to risk it.
+\begin{battlespecial}{Grima - Fast Strat}
 \battleinfo{commander}{2}{\chrom, \robin, \frederick, Henry}
 \prep{
 	\units{
@@ -16,9 +17,58 @@
 }
 \turn{
 	\frederickf
+	\movewait{6U}
+	\robinf
+	\moveattack{1R, 6U}{Grima}{1U}
+}
+\end{enumerate}
+\end{battlespecial}
+\vfill
+
+\begin{battlespecial}{Grima - Saftey Strat}
+\battleinfo{commander}{2}{\chrom, \robin, \frederick, Henry, \olivia, \cherche}
+\prep{
+	\units{
+		\remove{All but \frederick, Henry, \olivia, \cherche}
+	}
+	\map{
+		\oliviaf
+		\begin{itemize}
+			\move{2U, 2R}
+		\end{itemize}
+	}
+	\item If you want, you can use all stat-boosting tonics on \robin. Use at least a \textbf{Magic Tonic} if you had 40 or less magic at the Thoron shop.
+}
+\begin{enumerate}
+\turn{
+	\pair{\chrom}{\robin}
+	\robinf
+	\movewait{8U}
+	\pair{\olivia}{\cherche}
+	\cherchef
+	\movewait{7U}
+	\pair{Henry}{\frederick}
+	\auto
+}
+\turn{
+	\frederickf
 	\movewait{7U}
 	\robinf
 	\moveattack{7U}{Grima}{1R}
+	\item \textit{If \robin\ didn't double crit}:
+	\cherchef
+	\begin{itemize}
+		\move{6U, 1L}
+		\item Switch
+	\end{itemize}
+	\oliviaf
+	\begin{itemize}
+		\item Dance for \robin\ 1U
+	\end{itemize}
+	\robinf
+	\begin{itemize}
+		\attack{Grima}{1U}
+	\end{itemize}
 }
 \end{enumerate}
 \end{battlespecial}

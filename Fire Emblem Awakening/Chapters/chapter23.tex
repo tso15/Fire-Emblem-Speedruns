@@ -8,6 +8,7 @@
 	\begin{itemize}
 		\item Make sure that \robin has an Elixir
 	\end{itemize}
+	\safetysave
 }
 \begin{enumerate}
 \turn{
@@ -28,16 +29,16 @@
 }
 \turn{
 	\robinf
-	\moveattack{1R, 2D}{Assassin}{1D}
+	\moveattack{1R, 2D}{Assassin with the Killer Bow and Killer Edge}{1D, movement can vary.}
 	\begin{itemize}
-	\use{Elixir}
+	\use{Elixir if needed. Ensure that you end up left of the center-right \enemy{Hero}}
 	\end{itemize}
 	\turnend
 }
 \turn{
 	\robinf
-	\moveattack{4R}{Hero}{2L}
-	\movewait{3R, 2D}
+	\moveattack{4R}{Hero}{1U, 1L}
+	\movewait{3R, 2D, ending at 2L of \enemy{Validar}}
 	\turnend
 }
 \end{enumerate}
